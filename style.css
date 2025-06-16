@@ -1,0 +1,230 @@
+:root {
+  --beige: #fff8e2;
+  --violet: #ee82ee;
+  --blue: #5283d1;
+  --orange: #e54f1e;
+  --yellow: #fec017;
+  --green: #364b1e;
+}
+
+body {
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: "NimbusSanL";
+  src: url("/assets/NimbusSanL-Regu.woff2") format("woff2"),
+    url("/assets/NimbusSanL-Regu.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "NimbusSanL";
+  src: url("/assets/NimbusSanL-Bold.woff2") format("woff2"),
+    url("/assets/NimbusSanL-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "NimbusSanL";
+  src: url("/assets/NimbusSanL-ReguItal.woff2") format("woff2"),
+    url("/assets/NimbusSanL-ReguItal.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "NimbusSanL";
+  src: url("/assets/NimbusSanL-BoldItal.woff2") format("woff2"),
+    url("/assets/NimbusSanL-BoldItal.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+body {
+  background-color: var(--orange);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  font-family: "NimbusSanL";
+  font-weight: bold;
+  color: var(--beige);
+  font-size: 1.15vw;
+  overflow-wrap: normal;
+  white-space: nowrap;
+}
+
+svg {
+  fill: var(--beige);
+  width: 100%;
+}
+
+h1 {
+  font-family: "NimbusSanL";
+  font-weight: bold;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.icon-wrapper {
+  margin-right: 2%;
+  max-width: 2.4vw;
+}
+
+.bio {
+  max-width: 50vw;
+}
+
+.photo {
+  max-width: 50vw;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 3vh;
+  gap: 3vw;
+  height: 94vh;
+}
+
+.header {
+  margin-top: -10vh;
+}
+
+.arrow {
+  position: absolute;
+  left: 95vw;
+  top: 67vh;
+  width: 5vw;
+}
+
+.link-to-ep {
+  position: absolute;
+  left: 74vw;
+  top: 70vh;
+  width: 15vw;
+}
+
+.link {
+  margin-top: -8%;
+  margin-left: 47%;
+  width: 15vw;
+}
+
+/* .socials-container {
+  margin-top: -20%;
+} */
+
+/* // X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap */
+@media (min-width: 575px) {
+  .link {
+    margin-top: -17%;
+    margin-left: 48%;
+  }
+}
+
+@media (orientation: portrait) {
+  .content-container {
+    flex-direction: column;
+  }
+  .mobile-bio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+  }
+  .link {
+    width: 30vw;
+    margin-left: 55%;
+    margin-top: -11%;
+  }
+
+  .bio {
+    width: 100%;
+    max-width: 100%;
+  }
+  p {
+    font-size: 2vw;
+    text-align: center;
+  }
+  .socials-container {
+    justify-content: center;
+    margin-left: -30%;
+  }
+  .header {
+    margin-top: -10%;
+  }
+  .icon-wrapper {
+    max-width: 3vw;
+  }
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 768px) and (orientation: portrait) {
+  .link {
+    margin-top: -14%;
+    margin-left: 48%;
+  }
+}
+
+@media (min-width: 768px) {
+  .link {
+    margin-top: -8%;
+    margin-left: 54%;
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 992px) {
+  .link {
+    margin-top: -13%;
+    margin-left: 47%;
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 1200px) {
+  .link {
+    margin-top: -12%;
+    margin-left: 47%;
+  }
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1450px) {
+  .link {
+    margin-top: -10%;
+    margin-left: 47%;
+  }
+}
+
+/* @media (max-width: 1450px) {
+  .link {
+    margin-top: 19%;
+    margin-left: 4%;
+  }
+} */
