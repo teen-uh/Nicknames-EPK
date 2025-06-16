@@ -9,45 +9,6 @@
 
 body {
   overflow: hidden;
-}
-
-@font-face {
-  font-family: "NimbusSanL";
-  src: url("/assets/NimbusSanL-Regu.woff2") format("woff2"),
-    url("/assets/NimbusSanL-Regu.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "NimbusSanL";
-  src: url("/assets/NimbusSanL-Bold.woff2") format("woff2"),
-    url("/assets/NimbusSanL-Bold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "NimbusSanL";
-  src: url("/assets/NimbusSanL-ReguItal.woff2") format("woff2"),
-    url("/assets/NimbusSanL-ReguItal.woff") format("woff");
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "NimbusSanL";
-  src: url("/assets/NimbusSanL-BoldItal.woff2") format("woff2"),
-    url("/assets/NimbusSanL-BoldItal.woff") format("woff");
-  font-weight: bold;
-  font-style: italic;
-  font-display: swap;
-}
-
-body {
   background-color: var(--orange);
 }
 
@@ -59,10 +20,10 @@ main {
 }
 
 p {
-  font-family: "NimbusSanL";
-  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
   color: var(--beige);
-  font-size: 1.15vw;
+  font-size: 1.2vw;
   overflow-wrap: normal;
   white-space: nowrap;
 }
@@ -89,9 +50,16 @@ h1 {
 
 .bio {
   max-width: 50vw;
+ }
+
+.photo img {
+  height: 100%;
+  width: auto;
 }
 
 .photo {
+  height: 50vw;
+  max-height: 94vh;
   max-width: 50vw;
 }
 
@@ -100,14 +68,18 @@ img {
   height: auto;
 }
 
+.mobile {
+  display: none;
+}
+
 .content-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 3vh;
+  padding: 2vh;
   gap: 3vw;
-  height: 94vh;
+  max-height: 94vh;
 }
 
 .header {
@@ -148,6 +120,19 @@ img {
 }
 
 @media (orientation: portrait) {
+  body {
+    overflow-y: scroll;
+  }
+  .photo {
+    width: 90vw;
+    max-width: 90vw;
+    height: auto;
+  }
+
+  .photo img {
+    width: 100%;
+    height: auto;
+  }
   .content-container {
     flex-direction: column;
   }
@@ -168,23 +153,30 @@ img {
     max-width: 100%;
   }
   p {
-    font-size: 2vw;
+    font-size: 3vw;
     text-align: center;
+    white-space: wrap;
   }
   .socials-container {
-    justify-content: center;
-    margin-left: -30%;
+    margin-left: 5%;
   }
   .header {
     margin-top: -10%;
   }
   .icon-wrapper {
-    max-width: 3vw;
+    max-width: 5vw;
+  }
+  .mobile {
+    display: block;
+  }
+
+  .desktop {
+    display: none;
   }
 }
 
 /* // Small devices (landscape phones, 576px and up) */
-@media (min-width: 768px) and (orientation: portrait) {
+@media (min-width: 575px) and (orientation: portrait) {
   .link {
     margin-top: -14%;
     margin-left: 48%;
@@ -202,7 +194,7 @@ img {
 @media (min-width: 992px) {
   .link {
     margin-top: -13%;
-    margin-left: 47%;
+    margin-left: 50%;
   }
 }
 
@@ -210,15 +202,15 @@ img {
 @media (min-width: 1200px) {
   .link {
     margin-top: -12%;
-    margin-left: 47%;
+    margin-left: 50%;
   }
 }
 
 /* // X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1450px) {
   .link {
-    margin-top: -10%;
-    margin-left: 47%;
+    margin-top: -8%;
+    margin-left: 50%;
   }
 }
 
