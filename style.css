@@ -2,7 +2,7 @@
   --beige: #fff8e2;
   --violet: #ee82ee;
   --blue: #5283d1;
-  --orange: #e54f1e;
+  --orange: #d8410f;
   --yellow: #fec017;
   --green: #364b1e;
 }
@@ -10,6 +10,13 @@
 body {
   overflow: hidden;
   background-color: var(--orange);
+  background-image: url("/assets/texture.jpg");
+  background-blend-mode: soft-light;
+  cursor: url('/assets/default.png'), auto;
+}
+
+a {
+  cursor: url('/assets/click.png'), auto;
 }
 
 main {
@@ -17,6 +24,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
 p {
@@ -112,7 +120,7 @@ img {
 
 /* // X-Small devices (portrait phones, less than 576px)
 // No media query for `xs` since this is the default in Bootstrap */
-@media (min-width: 575px) {
+@media (min-width: 320px) {
   .link {
     margin-top: -17%;
     margin-left: 48%;
@@ -120,6 +128,9 @@ img {
 }
 
 @media (orientation: portrait) {
+  main {
+    height: fit-content;
+  }
   body {
     overflow-y: scroll;
   }
@@ -135,6 +146,7 @@ img {
   }
   .content-container {
     flex-direction: column;
+    max-height: fit-content;
   }
   .mobile-bio {
     display: flex;
@@ -143,9 +155,8 @@ img {
     align-self: center;
   }
   .link {
-    width: 30vw;
-    margin-left: 55%;
-    margin-top: -11%;
+    width: 50vw;
+    margin: auto;
   }
 
   .bio {
@@ -153,18 +164,19 @@ img {
     max-width: 100%;
   }
   p {
-    font-size: 3vw;
+    font-size: 5vw;
     text-align: center;
     white-space: wrap;
   }
   .socials-container {
-    margin-left: 5%;
+    align-self: center;
   }
   .header {
     margin-top: -10%;
   }
   .icon-wrapper {
-    max-width: 5vw;
+    max-width: 15vw;
+    width: 13vw;
   }
   .mobile {
     display: block;
@@ -176,14 +188,41 @@ img {
 }
 
 /* // Small devices (landscape phones, 576px and up) */
-@media (min-width: 575px) and (orientation: portrait) {
+@media (min-width: 480px) and (orientation: portrait) {
   .link {
     margin-top: -14%;
     margin-left: 48%;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 420px) and (orientation: portrait) {
+  .photo {
+    width: 60vw;
+    max-width: 60vw;
+  }
+  .link {
+    width: 40vw;
+    margin: auto;
+  }
+
+  p {
+    font-size: 3vw;
+    text-align: center;
+    white-space: wrap;
+  }
+  .socials-container {
+    align-self: center;
+  }
+  .header {
+    margin-top: -12%;
+  }
+  .icon-wrapper {
+    max-width: 15vw;
+    width: 13vw;
+  }
+}
+
+@media (min-width: 600px) {
   .link {
     margin-top: -8%;
     margin-left: 54%;
@@ -191,7 +230,7 @@ img {
 }
 
 /* // Medium devices (tablets, 768px and up) */
-@media (min-width: 992px) {
+@media (min-width: 801px) {
   .link {
     margin-top: -13%;
     margin-left: 50%;
@@ -199,7 +238,7 @@ img {
 }
 
 /* // Large devices (desktops, 992px and up) */
-@media (min-width: 1200px) {
+@media (min-width: 1025px) {
   .link {
     margin-top: -12%;
     margin-left: 50%;
@@ -207,7 +246,7 @@ img {
 }
 
 /* // X-Large devices (large desktops, 1200px and up) */
-@media (min-width: 1450px) {
+@media (min-width: 1281px) {
   .link {
     margin-top: -8%;
     margin-left: 50%;
