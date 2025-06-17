@@ -10,9 +10,10 @@
 body {
   overflow: hidden;
   background-color: var(--orange);
-  background-image: url("/assets/texture.jpg");
+  background-image: url("/assets/alt.jpg");
   background-blend-mode: soft-light;
   cursor: url('/assets/default.png'), auto;
+  background-size: cover;
 }
 
 a {
